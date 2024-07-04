@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4da0dd0d6b745fb4488d8443b4294908, type: 3}
+  m_Name: Kill Example
+  m_EditorClassIdentifier: 
+  goal: 4
+  quest_name: "\u0423\u0431\u0438\u0439\u0446\u0430"
+  quest_description: "\u0423\u0431\u0438\u0442\u044C 4 \u0441\u0444\u0435\u0440\u044B"
+  gold_reward: 999999
+  quest_id: 6
+  need_re_start_event: 0
+  animation_start: 1
+  animation_finish: 1

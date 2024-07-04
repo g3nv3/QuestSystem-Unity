@@ -1,0 +1,34 @@
+{
+    "name": "PlayerInput",
+    "maps": [
+        {
+            "name": "UI",
+            "id": "55293016-478e-41b7-9e36-18c86cf41c17",
+            "actions": [
+                {
+                    "name": "VisiblePanel",
+                    "type": "Button",
+                    "id": "b6ecc160-507d-4d94-9abe-5f2b7ed05e8e",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "55585a0c-8c5d-4a34-8547-cac05505b1f0",
+                    "path": "<Keyboard>/escape",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "VisiblePanel",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}
