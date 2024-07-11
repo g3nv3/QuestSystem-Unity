@@ -18,8 +18,8 @@ public class QuestModel : MonoBehaviour
     [SerializeField] private QuestSO[] _questList;
     [SerializeField] private List<QuestStateInfo> _questsEvents = new List<QuestStateInfo>();
 
-    [field:SerializeField] public List<QuestData> _activeQuest { get; private set; }
-    [field:SerializeField] public List<QuestData> _data { get; private set; }
+    public List<QuestData> _activeQuest { get; private set; }
+    public List<QuestData> _data { get; private set; }
 
     private void Awake()
     {

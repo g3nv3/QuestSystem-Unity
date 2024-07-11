@@ -12,9 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4da0dd0d6b745fb4488d8443b4294908, type: 3}
   m_Name: Trigger 1
   m_EditorClassIdentifier: 
-  goal: 1
-  quest_name: Trigger 1
-  quest_description: "\u041D\u0430\u0441\u0442\u0443\u043F\u0438\u0442\u044C \u043D\u0430
-    \u0437\u0435\u043B\u0435\u043D\u044B\u0439 1 \u0440\u0430\u0437"
-  gold_reward: 1
-  quest_id: 0
+  Goal: 1
+  QuestName: "\u0417\u0435\u043B\u0435\u043D\u044B\u0439 1"
+  QuestDescription: "\u041D\u0430\u0441\u0442\u0443\u043F\u0438\u0442\u044C \u043D\u0430
+    \u0437\u0435\u043B\u0435\u043D\u0443\u044E \u043F\u043B\u0438\u0442\u043A\u0443
+    \u043E\u0434\u0438\u043D \u0440\u0430\u0437"
+  GoldReward: 1
+  QuestId: 0
+  NeedReStartEvent: 0
+  HasStartAnimation: 1
+  HasFinishAnimation: 1

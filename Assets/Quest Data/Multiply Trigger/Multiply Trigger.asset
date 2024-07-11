@@ -12,13 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4da0dd0d6b745fb4488d8443b4294908, type: 3}
   m_Name: Multiply Trigger
   m_EditorClassIdentifier: 
-  goal: 1
-  quest_name: Multiply Trigger
-  quest_description: "\u041F\u0440\u043E\u0439\u0442\u0438 \u043F\u043E \u0432\u0441\u0435\u043C
-    \u0442\u043E\u0447\u043A\u0430\u043C, \u0432\u044B\u0434\u0432\u0438\u0433\u0430\u0439\u0442\u0435\u0441\u044C
-    \u043A \u043F\u0435\u0440\u0432\u043E\u0439 \u0442\u043E\u0447\u043A\u0435"
-  gold_reward: 0
-  quest_id: 2
-  need_re_start_event: 1
-  animation_start: 1
-  animation_finish: 0
+  Goal: 1
+  QuestName: "\u041F\u043B\u0438\u0442\u043A\u0438"
+  QuestDescription: "\u041F\u0440\u043E\u0439\u0442\u0438 \u043F\u043E \u0442\u0440\u0435\u043C
+    \u043F\u043B\u0438\u0442\u043A\u0430\u043C"
+  GoldReward: 0
+  QuestId: 2
+  NeedReStartEvent: 1
+  HasStartAnimation: 1
+  HasFinishAnimation: 1

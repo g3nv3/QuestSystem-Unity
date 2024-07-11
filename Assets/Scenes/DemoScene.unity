@@ -489,8 +489,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b944c618773208645944601ca4a43c3d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  qname: {fileID: 2058608680}
-  prog: {fileID: 1741879165}
+  _questName: {fileID: 2058608680}
+  _progress: {fileID: 1741879165}
 --- !u!1 &67864491
 GameObject:
   m_ObjectHideFlags: 0
@@ -3016,8 +3016,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b39c9046c61b2041a27beff0ceadc65, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  presenter: {fileID: 1131085688}
-  is_reset: 1
+  _presenter: {fileID: 1131085688}
+  _isReset: 1
 --- !u!1 &806964140
 GameObject:
   m_ObjectHideFlags: 0
@@ -4004,20 +4004,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 082acb43cff2a8848890abe7b371c492, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animator: {fileID: 514732312}
-  presenter: {fileID: 1131085688}
-  name_txt: {fileID: 67864494}
-  desc_txt: {fileID: 579713236}
-  list_panel: {fileID: 806964140}
-  quest_parent: {fileID: 2023154081}
-  quest_prefab: {fileID: 7746401867917151962, guid: 0af0964c04f881a4696a83ffb73aff1c, type: 3}
-  selected_panel: {fileID: 47282177}
-  select_btn: {fileID: 1808879974}
-  questSelected: {fileID: 47282181}
-  btn_sel_text: {fileID: 2012343678}
-  sel_color: {r: 0.65520984, g: 0.7830189, b: 0.5724902, a: 0.39607844}
-  highl_color: {r: 0.1843137, g: 0.22291663, b: 0.5647059, a: 0.39607844}
-  base_color: {r: 0.8117647, g: 0.32941177, b: 0.2784314, a: 0.39607844}
+  _animator: {fileID: 514732312}
+  _presenter: {fileID: 1131085688}
+  _nameText: {fileID: 67864494}
+  _descriptionText: {fileID: 579713236}
+  _listPanel: {fileID: 806964140}
+  _questParent: {fileID: 2023154081}
+  _questPrefab: {fileID: 7746401867917151962, guid: 0af0964c04f881a4696a83ffb73aff1c, type: 3}
+  _selectedPanel: {fileID: 47282177}
+  _selectBtn: {fileID: 1808879974}
+  _questSelected: {fileID: 47282181}
+  _btnSelectText: {fileID: 2012343678}
+  _selectedColor: {r: 0.29971242, g: 1, b: 0, a: 0.38431373}
+  _highlightedColor: {r: 0.042452812, g: 0.38003793, b: 1, a: 0.4745098}
+  _baseColor: {r: 0.9056604, g: 0.2264151, b: 0.2264151, a: 0.34901962}
 --- !u!114 &1131085687
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4030,17 +4030,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 049164efd99c31a459118087eafeb77a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  view: {fileID: 1131085686}
-  quest_list:
+  _view: {fileID: 1131085686}
+  _questList:
+  - {fileID: 11400000, guid: 8503f9f20b4eb0c4f86b152e0811b6a4, type: 2}
   - {fileID: 11400000, guid: 59f1d8d288c4173428a32b677c9369fa, type: 2}
   - {fileID: 11400000, guid: 5c42dd15c8d70b84a82d1eab6f4be443, type: 2}
   - {fileID: 11400000, guid: c1f0bd1aec356264f858823f7ae0ba47, type: 2}
   - {fileID: 11400000, guid: e2d17880ccadd14438cba06726c2f5ef, type: 2}
   - {fileID: 11400000, guid: bccf9d2d5dfc2a247837d01a6c9d0ff5, type: 2}
-  - {fileID: 11400000, guid: 8503f9f20b4eb0c4f86b152e0811b6a4, type: 2}
-  quests_events:
-  - id: 2
-    on_start:
+  _questsEvents:
+  - Id: 2
+    OnStart:
       m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 929416174}
@@ -4055,7 +4055,7 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-    on_finish:
+    OnFinish:
       m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 929416174}
@@ -4072,7 +4072,7 @@ MonoBehaviour:
           m_CallState: 2
         - m_Target: {fileID: 1131085688}
           m_TargetAssemblyTypeName: QuestPresenter, Assembly-CSharp
-          m_MethodName: start_quest
+          m_MethodName: StartQuest
           m_Mode: 3
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -4082,8 +4082,8 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-  - id: 3
-    on_start:
+  - Id: 3
+    OnStart:
       m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 929416174}
@@ -4098,7 +4098,7 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-    on_finish:
+    OnFinish:
       m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 929416174}
@@ -4115,7 +4115,7 @@ MonoBehaviour:
           m_CallState: 2
         - m_Target: {fileID: 1131085688}
           m_TargetAssemblyTypeName: QuestPresenter, Assembly-CSharp
-          m_MethodName: start_quest
+          m_MethodName: StartQuest
           m_Mode: 3
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -4125,8 +4125,8 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-  - id: 4
-    on_start:
+  - Id: 4
+    OnStart:
       m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 929416174}
@@ -4141,7 +4141,7 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-    on_finish:
+    OnFinish:
       m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 929416174}
@@ -4156,27 +4156,8 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-  - id: 5
-    on_start:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 929416174}
-          m_TargetAssemblyTypeName: ShowObject, Assembly-CSharp
-          m_MethodName: show
-          m_Mode: 2
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-    on_finish:
-      m_PersistentCalls:
-        m_Calls: []
-  - id: 6
-    on_start:
+  - Id: 6
+    OnStart:
       m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 929416174}
@@ -4227,11 +4208,9 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-    on_finish:
+    OnFinish:
       m_PersistentCalls:
         m_Calls: []
-  <active_quest>k__BackingField: []
-  <data>k__BackingField: []
 --- !u!114 &1131085688
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4244,8 +4223,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8572741bc66c904468f181334f6118fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  model: {fileID: 1131085687}
-  can_save: 1
+  _model: {fileID: 1131085687}
+  CanSave: 1
 --- !u!1 &1160989190
 GameObject:
   m_ObjectHideFlags: 0
@@ -6341,8 +6320,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b39c9046c61b2041a27beff0ceadc65, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  presenter: {fileID: 1131085688}
-  is_reset: 0
+  _presenter: {fileID: 1131085688}
+  _isReset: 0
 --- !u!65 &1810405924
 BoxCollider:
   m_ObjectHideFlags: 0

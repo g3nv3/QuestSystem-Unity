@@ -80,6 +80,8 @@ public class QuestData
     {
         if (ReferenceEquals(a, null) && ReferenceEquals(b, null))
             return false;
+        if (ReferenceEquals(a, null) && !ReferenceEquals(b, null) || !ReferenceEquals(a, null) && ReferenceEquals(b, null))
+            return true;
         return a.quest_id != b.quest_id ||
                a.quest_name != b.quest_name ||
                a.quest_description != b.quest_description ||

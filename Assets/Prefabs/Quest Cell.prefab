@@ -495,16 +495,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7efbeac0b2a9c514fa60d87a498b4530, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  qname: {fileID: 7773871320563956606}
-  desc: {fileID: 6603520214195241856}
-  prog: {fileID: 126691076423690373}
-  image: {fileID: 8212899066941200615}
-  <data>k__BackingField:
-    progress: 0
-    active: 0
-    selected: 0
-    highlighted: 0
-    finished: 0
+  _questName: {fileID: 7773871320563956606}
+  _description: {fileID: 6603520214195241856}
+  _progress: {fileID: 126691076423690373}
+  _image: {fileID: 8212899066941200615}
 --- !u!114 &4453970399080734542
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -551,7 +545,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 3773258262476518813}
         m_TargetAssemblyTypeName: QuestCell, Assembly-CSharp
-        m_MethodName: highlight
+        m_MethodName: Highlight
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
