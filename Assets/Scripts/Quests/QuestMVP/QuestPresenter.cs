@@ -10,20 +10,12 @@ public class QuestPresenter : MonoBehaviour
     {
         QuestBus.GetInstance().OnStart += StartQuest;
         QuestBus.GetInstance().OnUpdateCounter += update;
+        QuestBus.GetInstance().OnInterrupt += Interrupt;    
     }
 
     private void Awake()
     {
         jsonSaver = new QuestJsonSaver();
-    }
-
-    public void Interrupt(QuestData data)
-    {
-        data.progress = 0;
-        data.active = false;
-        data.finished = false;
-        data.selected = false;
-        data.highlighted = false;
     }
 
     private void Start()
@@ -47,7 +39,8 @@ public class QuestPresenter : MonoBehaviour
     {
         QuestBus.GetInstance().OnStart -= StartQuest;
         QuestBus.GetInstance().OnUpdateCounter -= update;
-        if(CanSave) jsonSaver.Save(key, _model._data);
+        QuestBus.GetInstance().OnInterrupt -= Interrupt;
+        if (CanSave) jsonSaver.Save(key, _model._data);
     }
 
     public void StartQuest(int id)
@@ -134,5 +127,12 @@ public class QuestPresenter : MonoBehaviour
         quest = _model.GetActiveQuest(id);
         quest.selected = true;
     }
-
+    public void Interrupt(QuestData data)
+    {
+        data.progress = 0;
+        data.active = false;
+        data.finished = false;
+        data.selected = false;
+        data.highlighted = false;
+    }
 }
