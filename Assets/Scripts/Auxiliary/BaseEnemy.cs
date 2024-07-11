@@ -14,7 +14,7 @@ public class BaseEnemy : MonoBehaviour
 
     private void Death()
     {
-        QuestBus.get_instance().on_update_counter?.Invoke(id, 1);
+        QuestBus.GetInstance().OnUpdateCounter?.Invoke(id, 1);
         Destroy(gameObject);
     }
 }

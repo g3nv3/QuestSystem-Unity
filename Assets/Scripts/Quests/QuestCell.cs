@@ -5,37 +5,37 @@ using UnityEngine.UI;
 [System.Serializable]
 public class QuestCell : MonoBehaviour
 {
-    [SerializeField] private TextMeshProUGUI qname;
-    [SerializeField] private TextMeshProUGUI desc;
-    [SerializeField] private TextMeshProUGUI prog;
-    [SerializeField] private Image image;
-    public QuestData data { get; private set; }
+    [SerializeField] private TextMeshProUGUI _questName;
+    [SerializeField] private TextMeshProUGUI _description;
+    [SerializeField] private TextMeshProUGUI _progress;
+    [SerializeField] private Image _image;
+    public QuestData Data { get; private set; }
 
     private void OnEnable()
     {
-        QuestBus.get_instance().on_update_data += update;
+        QuestBus.GetInstance().OnUpdateData += update;
     }
 
     private void OnDisable()
     {
-        QuestBus.get_instance().on_update_data -= update;
+        QuestBus.GetInstance().OnUpdateData -= update;
     }
 
-    public void highlight()
+    public void Highlight()
     {
-        QuestBus.get_instance().on_highlighted?.Invoke(data, image);
+        QuestBus.GetInstance().OnHighlighted?.Invoke(Data, _image);
     }
 
-    public void init(QuestData data)
+    public void Init(QuestData data)
     {
-        this.data = data;
-        qname.text = data.quest_name;
-        desc.text = data.quest_description;
-        prog.text = $"Прогресс: {data.progress}/{data.goal}";
+        Data = data;
+        _questName.text = data.quest_name;
+        _description.text = data.quest_description;
+        _progress.text = $"Прогресс: {data.progress}/{data.goal}";
     }
 
     public void update()
     {
-        prog.text = $"Прогресс: {data.progress}/{data.goal}";
+        _progress.text = $"Прогресс: {Data.progress}/{Data.goal}";
     } 
 }

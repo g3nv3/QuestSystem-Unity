@@ -1,16 +1,15 @@
-using System.Linq;
 using UnityEngine;
 public class QuestPresenter : MonoBehaviour
 {
-    [SerializeField] private QuestModel model;
+    [SerializeField] private QuestModel _model;
     private QuestJsonSaver jsonSaver;
     private string key = "quest_data";
 
-    [HideInInspector] public bool can_save = true; // Используется в ResetJson
+    [HideInInspector] public bool CanSave = true; // Используется в ResetJson
     private void OnEnable()
     {
-        QuestBus.get_instance().on_start += start_quest;
-        QuestBus.get_instance().on_update_counter += update;
+        QuestBus.GetInstance().OnStart += StartQuest;
+        QuestBus.GetInstance().OnUpdateCounter += update;
     }
 
     private void Awake()
@@ -18,16 +17,25 @@ public class QuestPresenter : MonoBehaviour
         jsonSaver = new QuestJsonSaver();
     }
 
+    public void Interrupt(QuestData data)
+    {
+        data.progress = 0;
+        data.active = false;
+        data.finished = false;
+        data.selected = false;
+        data.highlighted = false;
+    }
+
     private void Start()
     {
-        load_from_json();
+        LoadFromJson();
     }
-    private void load_from_json() 
+    private void LoadFromJson() 
     {
         try
         {
-            var temp = jsonSaver.load(key);
-            model.load(temp);
+            var temp = jsonSaver.Load(key);
+            _model.Load(temp);
         }
         catch 
         { 
@@ -37,14 +45,14 @@ public class QuestPresenter : MonoBehaviour
 
     private void OnDisable()
     {
-        QuestBus.get_instance().on_start -= start_quest;
-        QuestBus.get_instance().on_update_counter -= update;
-        if(can_save) jsonSaver.save(key, model.data);
+        QuestBus.GetInstance().OnStart -= StartQuest;
+        QuestBus.GetInstance().OnUpdateCounter -= update;
+        if(CanSave) jsonSaver.Save(key, _model._data);
     }
 
-    public void start_quest(int id)
+    public void StartQuest(int id)
     {
-        QuestData quest = model.get_quest(id);
+        QuestData quest = _model.GetQuest(id);
         if (quest == null)
         {
             Debug.LogWarning($"Cant start, quest not exit id: {id}");
@@ -61,14 +69,14 @@ public class QuestPresenter : MonoBehaviour
             return;
         }
 
-        model.active_quest.Add(quest);
+        _model._activeQuest.Add(quest);
         quest.active = true;
-        model.on_start(quest);
+        _model.OnStart(quest);
     }
 
     public void update(int id, int count)
     {
-        QuestData quest = model.get_active_quest(id);
+        QuestData quest = _model.GetActiveQuest(id);
         if (quest == null)
         {
             Debug.LogWarning($"Cant update, quest not exit id: {id}");
@@ -77,13 +85,13 @@ public class QuestPresenter : MonoBehaviour
         quest.progress += count;
         if (quest.progress >= quest.goal)
         {
-            finish_quest(id);
+            FinishQuest(id);
             quest.selected = false;
             quest.active = false;
             quest.finished = true;
             return;
         }
-        QuestBus.get_instance().on_update_data?.Invoke();
+        QuestBus.GetInstance().OnUpdateData?.Invoke();
     }
 
     public void select(QuestData data)
@@ -91,39 +99,39 @@ public class QuestPresenter : MonoBehaviour
         data.selected = !data.selected;
     }
 
-    public void unhighl_all()
+    public void UnhighlAll()
     {
-        foreach(var qd in model.active_quest)
+        foreach(var qd in _model._activeQuest)
             qd.highlighted = false;
     }
 
-    public void unsel_all(QuestData data)
+    public void UnselAll(QuestData data)
     {
-        foreach (var qd in model.active_quest)
+        foreach (var qd in _model._activeQuest)
             if(qd != data)
                 qd.selected = false;
     }
-    public void finish_quest(int id)
+    public void FinishQuest(int id)
     {
-        QuestData quest = model.get_active_quest(id);
+        QuestData quest = _model.GetActiveQuest(id);
         if (quest == null)
         {
             Debug.LogWarning($"Cant finish, quest not exit id: {id}");
             return;
         }
-        model.active_quest.Remove(quest);
-        model.on_finish(quest);
+        _model._activeQuest.Remove(quest);
+        _model.OnFinish(quest);
     }
 
     public void select(int id)
     {
-        QuestData quest = model.active_quest.Find(q => q.selected);
+        QuestData quest = _model._activeQuest.Find(q => q.selected);
         if (quest != null)
         {
             if (quest.selected && quest.quest_id != id)
                 quest.selected = false;
         }
-        quest = model.get_active_quest(id);
+        quest = _model.GetActiveQuest(id);
         quest.selected = true;
     }
 

@@ -1,13 +1,14 @@
 using UnityEngine;
 using UnityEngine.Events;
 
-public class QuestActivatorTrigger : MonoBehaviour
+public class QuestUpdaterTrigger : MonoBehaviour
 {
     public int id = 0;
+    public int count = 1;
 
     private void OnTriggerEnter(Collider other)
     {
         if(other.CompareTag("Player"))
-            QuestBus.get_instance().on_start?.Invoke(id);
+            QuestBus.GetInstance().OnUpdateCounter?.Invoke(id, count);
     }
 }

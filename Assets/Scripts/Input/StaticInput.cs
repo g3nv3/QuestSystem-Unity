@@ -4,7 +4,7 @@ public class StaticInput : MonoBehaviour
 {
     private static PlayerInput instance;
 
-    public static PlayerInput get_instance()
+    public static PlayerInput GetInstance()
     {
         if(instance == null)
         {

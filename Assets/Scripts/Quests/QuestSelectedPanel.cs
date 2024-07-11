@@ -5,31 +5,31 @@ using UnityEngine;
 
 public class QuestSelectedPanel : MonoBehaviour
 {
-    [SerializeField] private TextMeshProUGUI qname;
-    [SerializeField] private TextMeshProUGUI prog;
-    public QuestData data { get; private set; }
+    [SerializeField] private TextMeshProUGUI _questName;
+    [SerializeField] private TextMeshProUGUI _progress;
+    public QuestData Data { get; private set; }
 
     private void OnEnable()
     {
-        QuestBus.get_instance().on_update_data += update;
-        QuestBus.get_instance().on_select += set;
+        QuestBus.GetInstance().OnUpdateData += update;
+        QuestBus.GetInstance().OnSelect += set;
     }
 
     private void OnDisable()
     {
-        QuestBus.get_instance().on_update_data -= update;
-        QuestBus.get_instance().on_select -= set;
+        QuestBus.GetInstance().OnUpdateData -= update;
+        QuestBus.GetInstance().OnSelect -= set;
     }
 
     public void set(QuestData data)
     {
-        this.data = data;
-        qname.text = data.quest_name;
-        prog.text = $"Прогресс: {data.progress}/{data.goal}";
+        Data = data;
+        _questName.text = data.quest_name;
+        _progress.text = $"Прогресс: {data.progress}/{data.goal}";
     }
 
     public void update()
     {
-        prog.text = $"Прогресс: {data.progress}/{data.goal}";
+        _progress.text = $"Прогресс: {Data.progress}/{Data.goal}";
     }
 }

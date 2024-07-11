@@ -13,9 +13,9 @@ public class MyList
 
 public class QuestJsonSaver 
 { 
-    public void save(string key, List<QuestData> data)
+    public void Save(string key, List<QuestData> data)
     {
-        string path = get_path(key);
+        string path = GetPath(key);
         var l = new MyList(data);
         string json = JsonUtility.ToJson(l);
 
@@ -25,9 +25,9 @@ public class QuestJsonSaver
         }
     }
 
-    public List<QuestData> load(string key)
+    public List<QuestData> Load(string key)
     {
-        string path = get_path(key);
+        string path = GetPath(key);
         using (var f_stream = new StreamReader(path))
         {
             var json = f_stream.ReadToEnd();
@@ -35,7 +35,7 @@ public class QuestJsonSaver
         }
     }
 
-    private string get_path(string key)
+    private string GetPath(string key)
     {
         return Path.Combine(Application.persistentDataPath, key);
     }

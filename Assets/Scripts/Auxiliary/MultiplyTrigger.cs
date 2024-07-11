@@ -12,7 +12,7 @@ public class MultiplyTrigger : MonoBehaviour
         if (other.CompareTag("Player") && active)
         {
             active = false;
-            QuestBus.get_instance().on_update_counter?.Invoke(id, 1);
+            QuestBus.GetInstance().OnUpdateCounter?.Invoke(id, 1);
             if(has_next) next_obj.SetActive(true);
             gameObject.SetActive(false);
         }

@@ -41,18 +41,18 @@ public class QuestData
     public static QuestData so_to_st(QuestSO so)
     {
         return new QuestData(
-            goal: so.goal,
-            name: so.quest_name,
-            desc: so.quest_description,
-            reward: so.gold_reward,
-            id: so.quest_id,
+            goal: so.Goal,
+            name: so.QuestName,
+            desc: so.QuestDescription,
+            reward: so.GoldReward,
+            id: so.QuestId,
             progress: 0,
             active: false,
             selected: false,
             finished: false,
-            need_re_start_event: so.need_re_start_event,
-            animation_start: so.animation_start,
-            animation_finish: so.animation_finish
+            need_re_start_event: so.NeedReStartEvent,
+            animation_start: so.HasStartAnimation,
+            animation_finish: so.HasFinishAnimation
             ) ;
     }
 

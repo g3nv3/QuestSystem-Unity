@@ -4,17 +4,17 @@ using UnityEngine;
 
 public class ResetJson : MonoBehaviour
 {
-    [SerializeField] private QuestPresenter presenter;
-    [SerializeField] private bool is_reset = false;
+    [SerializeField] private QuestPresenter _presenter;
+    [SerializeField] private bool _isReset = false;
     private string key = "quest_data";
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
         {
-            if (is_reset)
+            if (_isReset)
             {
-                presenter.can_save = false;
+                _presenter.CanSave = false;
                 string path = Path.Combine(Application.persistentDataPath, key);
                 File.WriteAllText(path, "");
             }
