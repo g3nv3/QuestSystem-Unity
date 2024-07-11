@@ -121,7 +121,7 @@ public class QuestPresenter : MonoBehaviour
         QuestData quest = _model._activeQuest.Find(q => q.selected);
         if (quest != null)
         {
-            if (quest.selected && quest.quest_id != id)
+            if (quest.quest_id != id)
                 quest.selected = false;
         }
         quest = _model.GetActiveQuest(id);
