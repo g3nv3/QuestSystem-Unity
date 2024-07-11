@@ -20,4 +20,4 @@ MonoBehaviour:
   QuestId: 2
   NeedReStartEvent: 1
   HasStartAnimation: 1
-  HasFinishAnimation: 1
+  HasFinishAnimation: 0
