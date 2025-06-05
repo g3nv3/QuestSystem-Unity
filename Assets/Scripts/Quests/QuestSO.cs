@@ -56,7 +56,7 @@ public class QuestSO : ScriptableObject
     {
         string json = JsonUtility.ToJson(data, true);
         File.WriteAllText(path, json);
-        AssetDatabase.Refresh();
+        AssetDatabase.ImportAsset(path);
     }
 #endif
 }
