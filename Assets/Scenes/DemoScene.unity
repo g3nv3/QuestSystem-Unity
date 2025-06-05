@@ -134,7 +134,6 @@ GameObject:
   - component: {fileID: 7448179}
   - component: {fileID: 7448178}
   - component: {fileID: 7448177}
-  - component: {fileID: 7448176}
   - component: {fileID: 7448180}
   m_Layer: 0
   m_Name: Updater Multiply Trigger (1)
@@ -159,19 +158,6 @@ Transform:
   - {fileID: 420635659}
   m_Father: {fileID: 949373754}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &7448176
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7448174}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6412be638466e0740b29107ecc343dfb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  id: 4
 --- !u!65 &7448177
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -255,7 +241,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 446300ae549c024409f0978017db41b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  id: 3
+  quest: {fileID: 11400000, guid: e2d17880ccadd14438cba06726c2f5ef, type: 2}
   count: 1
 --- !u!1 &17782401
 GameObject:
@@ -751,12 +737,12 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: -4.497816, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  _SortingLayer: 0
-  _SortingLayerID: 0
-  _SortingOrder: 0
   m_hasFontAssetChanged: 0
   m_renderer: {fileID: 85724069}
   m_maskType: 0
+  _SortingLayer: 0
+  _SortingLayerID: 0
+  _SortingOrder: 0
 --- !u!23 &85724069
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1154,7 +1140,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6412be638466e0740b29107ecc343dfb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  id: 1
+  quest: {fileID: 11400000, guid: 5c42dd15c8d70b84a82d1eab6f4be443, type: 2}
 --- !u!65 &252431743
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1274,7 +1260,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6412be638466e0740b29107ecc343dfb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  id: 0
+  quest: {fileID: 11400000, guid: 59f1d8d288c4173428a32b677c9369fa, type: 2}
 --- !u!65 &291577421
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1465,7 +1451,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 446300ae549c024409f0978017db41b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  id: 4
+  quest: {fileID: 11400000, guid: bccf9d2d5dfc2a247837d01a6c9d0ff5, type: 2}
   count: 1
 --- !u!1 &328998848
 GameObject:
@@ -1762,12 +1748,12 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: -4.497816, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  _SortingLayer: 0
-  _SortingLayerID: 0
-  _SortingOrder: 0
   m_hasFontAssetChanged: 0
   m_renderer: {fileID: 420635661}
   m_maskType: 0
+  _SortingLayer: 0
+  _SortingLayerID: 0
+  _SortingOrder: 0
 --- !u!23 &420635661
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1862,7 +1848,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6412be638466e0740b29107ecc343dfb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  id: 6
+  quest: {fileID: 11400000, guid: 8503f9f20b4eb0c4f86b152e0811b6a4, type: 2}
 --- !u!65 &484266030
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2059,12 +2045,12 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  _SortingLayer: 0
-  _SortingLayerID: 0
-  _SortingOrder: 0
   m_hasFontAssetChanged: 0
   m_renderer: {fileID: 514528354}
   m_maskType: 0
+  _SortingLayer: 0
+  _SortingLayerID: 0
+  _SortingOrder: 0
 --- !u!23 &514528354
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2492,12 +2478,12 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  _SortingLayer: 0
-  _SortingLayerID: 0
-  _SortingOrder: 0
   m_hasFontAssetChanged: 0
   m_renderer: {fileID: 589934514}
   m_maskType: 0
+  _SortingLayer: 0
+  _SortingLayerID: 0
+  _SortingOrder: 0
 --- !u!23 &589934514
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2665,12 +2651,12 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: -4.497816, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  _SortingLayer: 0
-  _SortingLayerID: 0
-  _SortingOrder: 0
   m_hasFontAssetChanged: 0
   m_renderer: {fileID: 593391944}
   m_maskType: 0
+  _SortingLayer: 0
+  _SortingLayerID: 0
+  _SortingOrder: 0
 --- !u!23 &593391944
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -3173,7 +3159,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef72a166bb1ea104b816d59cd08b5b70, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  id: 6
+  quest: {fileID: 11400000, guid: 8503f9f20b4eb0c4f86b152e0811b6a4, type: 2}
 --- !u!135 &827282442
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -3422,7 +3408,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef72a166bb1ea104b816d59cd08b5b70, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  id: 6
+  quest: {fileID: 11400000, guid: 8503f9f20b4eb0c4f86b152e0811b6a4, type: 2}
 --- !u!135 &862745778
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -3591,7 +3577,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6412be638466e0740b29107ecc343dfb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  id: 2
+  quest: {fileID: 11400000, guid: c1f0bd1aec356264f858823f7ae0ba47, type: 2}
 --- !u!65 &949373756
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4039,7 +4025,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: e2d17880ccadd14438cba06726c2f5ef, type: 2}
   - {fileID: 11400000, guid: bccf9d2d5dfc2a247837d01a6c9d0ff5, type: 2}
   _questsEvents:
-  - Id: 2
+  - Quest: {fileID: 11400000, guid: c1f0bd1aec356264f858823f7ae0ba47, type: 2}
     OnStart:
       m_PersistentCalls:
         m_Calls:
@@ -4073,16 +4059,16 @@ MonoBehaviour:
         - m_Target: {fileID: 1131085688}
           m_TargetAssemblyTypeName: QuestPresenter, Assembly-CSharp
           m_MethodName: StartQuest
-          m_Mode: 3
+          m_Mode: 2
           m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_ObjectArgument: {fileID: 11400000, guid: e2d17880ccadd14438cba06726c2f5ef, type: 2}
+            m_ObjectArgumentAssemblyTypeName: QuestSO, Assembly-CSharp
             m_IntArgument: 3
             m_FloatArgument: 0
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-  - Id: 3
+  - Quest: {fileID: 11400000, guid: e2d17880ccadd14438cba06726c2f5ef, type: 2}
     OnStart:
       m_PersistentCalls:
         m_Calls:
@@ -4116,16 +4102,16 @@ MonoBehaviour:
         - m_Target: {fileID: 1131085688}
           m_TargetAssemblyTypeName: QuestPresenter, Assembly-CSharp
           m_MethodName: StartQuest
-          m_Mode: 3
+          m_Mode: 2
           m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_ObjectArgument: {fileID: 11400000, guid: bccf9d2d5dfc2a247837d01a6c9d0ff5, type: 2}
+            m_ObjectArgumentAssemblyTypeName: QuestSO, Assembly-CSharp
             m_IntArgument: 4
             m_FloatArgument: 0
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-  - Id: 4
+  - Quest: {fileID: 11400000, guid: bccf9d2d5dfc2a247837d01a6c9d0ff5, type: 2}
     OnStart:
       m_PersistentCalls:
         m_Calls:
@@ -4156,7 +4142,7 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-  - Id: 6
+  - Quest: {fileID: 11400000, guid: 8503f9f20b4eb0c4f86b152e0811b6a4, type: 2}
     OnStart:
       m_PersistentCalls:
         m_Calls:
@@ -4630,12 +4616,12 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: -4.497816, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  _SortingLayer: 0
-  _SortingLayerID: 0
-  _SortingOrder: 0
   m_hasFontAssetChanged: 0
   m_renderer: {fileID: 1349860223}
   m_maskType: 0
+  _SortingLayer: 0
+  _SortingLayerID: 0
+  _SortingOrder: 0
 --- !u!23 &1349860223
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -4805,12 +4791,12 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: -1.8048172, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  _SortingLayer: 0
-  _SortingLayerID: 0
-  _SortingOrder: 0
   m_hasFontAssetChanged: 0
   m_renderer: {fileID: 1350302355}
   m_maskType: 0
+  _SortingLayer: 0
+  _SortingLayerID: 0
+  _SortingOrder: 0
 --- !u!23 &1350302355
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -4978,12 +4964,12 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  _SortingLayer: 0
-  _SortingLayerID: 0
-  _SortingOrder: 0
   m_hasFontAssetChanged: 0
   m_renderer: {fileID: 1350782063}
   m_maskType: 0
+  _SortingLayer: 0
+  _SortingLayerID: 0
+  _SortingOrder: 0
 --- !u!23 &1350782063
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -5149,12 +5135,12 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: -1.8048172, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  _SortingLayer: 0
-  _SortingLayerID: 0
-  _SortingOrder: 0
   m_hasFontAssetChanged: 0
   m_renderer: {fileID: 1412883526}
   m_maskType: 0
+  _SortingLayer: 0
+  _SortingLayerID: 0
+  _SortingOrder: 0
 --- !u!23 &1412883526
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -5401,7 +5387,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef72a166bb1ea104b816d59cd08b5b70, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  id: 6
+  quest: {fileID: 11400000, guid: 8503f9f20b4eb0c4f86b152e0811b6a4, type: 2}
 --- !u!135 &1515279929
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -5598,12 +5584,12 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  _SortingLayer: 0
-  _SortingLayerID: 0
-  _SortingOrder: 0
   m_hasFontAssetChanged: 0
   m_renderer: {fileID: 1531695145}
   m_maskType: 0
+  _SortingLayer: 0
+  _SortingLayerID: 0
+  _SortingOrder: 0
 --- !u!23 &1531695145
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -5693,7 +5679,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef72a166bb1ea104b816d59cd08b5b70, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  id: 6
+  quest: {fileID: 11400000, guid: 8503f9f20b4eb0c4f86b152e0811b6a4, type: 2}
 --- !u!135 &1579340252
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -6026,12 +6012,12 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: -4.497816, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  _SortingLayer: 0
-  _SortingLayerID: 0
-  _SortingOrder: 0
   m_hasFontAssetChanged: 0
   m_renderer: {fileID: 1747855093}
   m_maskType: 0
+  _SortingLayer: 0
+  _SortingLayerID: 0
+  _SortingOrder: 0
 --- !u!23 &1747855093
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -6476,7 +6462,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 446300ae549c024409f0978017db41b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  id: 0
+  quest: {fileID: 11400000, guid: 59f1d8d288c4173428a32b677c9369fa, type: 2}
   count: 1
 --- !u!65 &1962289773
 BoxCollider:
@@ -6668,7 +6654,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 446300ae549c024409f0978017db41b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  id: 1
+  quest: {fileID: 11400000, guid: 5c42dd15c8d70b84a82d1eab6f4be443, type: 2}
   count: 1
 --- !u!1 &2012343676
 GameObject:
@@ -7119,7 +7105,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 446300ae549c024409f0978017db41b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  id: 2
+  quest: {fileID: 11400000, guid: c1f0bd1aec356264f858823f7ae0ba47, type: 2}
   count: 1
 --- !u!1660057539 &9223372036854775807
 SceneRoots:

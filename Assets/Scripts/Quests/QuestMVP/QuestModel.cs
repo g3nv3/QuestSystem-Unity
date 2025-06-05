@@ -7,7 +7,7 @@ using UnityEngine.Events;
 [Serializable]
 public class QuestStateInfo
 {
-    public int Id;
+    public QuestSO Quest;
     public UnityEvent OnStart = new UnityEvent();
     public UnityEvent OnFinish = new UnityEvent();
 }
@@ -54,7 +54,7 @@ public class QuestModel : MonoBehaviour
             {
                 _activeQuest.Add(quest);
                 if (quest.need_re_start_event) {
-                    var temp = _questsEvents.FirstOrDefault(qusetEventFin => qusetEventFin.Id == quest.quest_id);
+                    var temp = _questsEvents.FirstOrDefault(qusetEventFin => qusetEventFin.Quest.QuestId == quest.quest_id);
                     if (temp != null)
                         temp.OnStart.Invoke();
                 }
@@ -76,7 +76,7 @@ public class QuestModel : MonoBehaviour
 
     private QuestStateInfo GetState(QuestData data)
     {
-        return _questsEvents.FirstOrDefault(quest => quest.Id == data.quest_id);
+        return _questsEvents.FirstOrDefault(quest => quest.Quest.QuestId == data.quest_id);
     }
 
     public QuestData GetActiveQuest(int id)

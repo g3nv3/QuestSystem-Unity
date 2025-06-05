@@ -43,22 +43,22 @@ public class QuestPresenter : MonoBehaviour
         if (CanSave) jsonSaver.Save(key, _model._data);
     }
 
-    public void StartQuest(int id)
+    public void StartQuest(QuestSO questGet)
     {
-        QuestData quest = _model.GetQuest(id);
+        QuestData quest = _model.GetQuest(questGet.QuestId);
         if (quest == null)
         {
-            Debug.LogWarning($"Cant start, quest not exit id: {id}");
+            Debug.LogWarning($"Cant start, quest not exit id: {quest.quest_id}");
             return;
         }
         if (quest.active)
         {
-            Debug.LogWarning($"Quest already started id: {id}");
+            Debug.LogWarning($"Quest already started id: {quest.quest_id}");
             return;
         }
         if (quest.finished)
         {
-            Debug.LogWarning($"Quest already finished id: {id}");
+            Debug.LogWarning($"Quest already finished id: {quest.quest_id}");
             return;
         }
 

@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class BaseEnemy : MonoBehaviour
 {
-    [SerializeField] private int id;
+    [SerializeField] private QuestSO quest;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -14,7 +14,7 @@ public class BaseEnemy : MonoBehaviour
 
     private void Death()
     {
-        QuestBus.GetInstance().OnUpdateCounter?.Invoke(id, 1);
+        QuestBus.GetInstance().OnUpdateCounter?.Invoke(quest.QuestId, 1);
         Destroy(gameObject);
     }
 }
